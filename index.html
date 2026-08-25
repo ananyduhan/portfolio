@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anany</title>
+<meta name="description" content="Anany — on-device inference, interpretability, and evals.">
+<meta property="og:title" content="Anany">
+<meta property="og:description" content="On-device inference, interpretability, and evals.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..700,0..100,0..1&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <a class="mark" href="index.html">Anany</a>
+    <nav class="nav">
+      <a href="index.html" aria-current="page">Work</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Anany</h1>
+    <p class="kicker">On-device inference, interpretability, and evals. I build small systems that make model behaviour measurable.</p>
+    <p class="status">
+      <span><i class="dot" aria-hidden="true"></i> Building quantization benchmarks</span>
+      <span>Sydney, AU</span>
+      <span>BIT (AI) · Macquarie</span>
+    </p>
+  </section>
+
+  <div class="rail" id="rail" role="group" aria-label="Filter work by topic"></div>
+
+  <main>
+    <ul class="index" id="index">
+
+      <li>
+        <a class="entry" href="#" data-tags="quantization on-device swift llama.cpp evals">
+          <span class="date">Aug 2026</span>
+          <div>
+            <h2>Measuring what quantization actually costs on-device</h2>
+            <p>A Swift harness over llama.cpp that runs the same prompt set across Q4, Q5, and Q8 builds on an iPhone, and reports quality drift alongside latency and thermal throttling — not just tokens per second.</p>
+            <p class="tags"><span>quantization</span><span>on-device</span><span>swift</span><span>llama.cpp</span></p>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a class="entry" href="#" data-tags="interpretability transformers nanogpt research">
+          <span class="date">Jul 2026</span>
+          <div>
+            <h2>Finding induction heads in a model I trained myself</h2>
+            <p>Training nanoGPT from scratch, then using TransformerLens to locate the heads that copy earlier tokens — ablating them to confirm the circuit does the work I think it does.</p>
+            <p class="tags"><span>interpretability</span><span>transformers</span><span>nanoGPT</span><span>research</span></p>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a class="entry" href="#" data-tags="evals benchmarks llm research">
+          <span class="date">Jun 2026</span>
+          <div>
+            <h2>What GSM8K stops telling you after fine-tuning</h2>
+            <p>Benchmarking fine-tuned math models and watching the score go up while the reasoning gets worse. Notes on grading formats, parsing failures, and why a single number hides most of the story.</p>
+            <p class="tags"><span>evals</span><span>benchmarks</span><span>llm</span></p>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a class="entry" href="#" data-tags="agriculture product hackathon frontend">
+          <span class="date">May 2026</span>
+          <div>
+            <h2>BHUMI — an agricultural intelligence app</h2>
+            <p>Built for Smart India Hackathon 2026: crop advisory for smallholder farmers, designed around low bandwidth, low literacy, and a screen you use standing in a field.</p>
+            <p class="tags"><span>agriculture</span><span>product</span><span>hackathon</span></p>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a class="entry" href="#" data-tags="nextjs supabase product web">
+          <span class="date">Mar 2026</span>
+          <div>
+            <h2>A booking system for dental clinics that front desks can actually run</h2>
+            <p>Next.js, Supabase, and Prisma behind a booking flow built around how receptionists really work: double-bookings, walk-ins, and the phone ringing mid-appointment.</p>
+            <p class="tags"><span>next.js</span><span>supabase</span><span>product</span></p>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a class="entry" href="#" data-tags="hardware fpv drones">
+          <span class="date">Jan 2026</span>
+          <div>
+            <h2>Building a 5-inch FPV quad, and reading CASA properly first</h2>
+            <p>Frame, stack, and VTX choices for a digital build — plus what Australian rules actually permit once you leave your backyard.</p>
+            <p class="tags"><span>hardware</span><span>fpv</span><span>drones</span></p>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a class="entry" href="#" data-tags="web product side-project">
+          <span class="date">Nov 2025</span>
+          <div>
+            <h2>MacroFuel — shipping a small paid tool</h2>
+            <p>A macro calculator taken from idea to a product people can buy. Mostly a lesson in how much of "shipping" is copy, pricing, and checkout rather than code.</p>
+            <p class="tags"><span>web</span><span>product</span><span>side-project</span></p>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a class="entry" href="#" data-tags="design frontend side-project">
+          <span class="date">Sep 2025</span>
+          <div>
+            <h2>Thread — designing a messaging UI worth using</h2>
+            <p>An interface study: what a chat app looks like when read receipts, presence, and notification pressure are treated as design decisions rather than defaults.</p>
+            <p class="tags"><span>design</span><span>frontend</span><span>side-project</span></p>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+
+    <p class="empty" id="empty" hidden>Nothing filed under that tag yet.</p>
+  </main>
+
+  <footer class="foot">
+    <span>© 2026 Anany</span>
+    <span>
+      <a href="https://github.com/">GitHub</a>
+      <a href="https://linkedin.com/">LinkedIn</a>
+      <a href="mailto:you@example.com">Email</a>
+    </span>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var entries = Array.prototype.slice.call(document.querySelectorAll('#index .entry'));
+  var rail = document.getElementById('rail');
+  var empty = document.getElementById('empty');
+  if (!entries.length || !rail) return;
+
+  // Count how many entries carry each tag.
+  var counts = {};
+  entries.forEach(function (el) {
+    (el.dataset.tags || '').split(/\s+/).filter(Boolean).forEach(function (t) {
+      counts[t] = (counts[t] || 0) + 1;
+    });
+  });
+
+  var tags = Object.keys(counts).sort(function (a, b) {
+    return counts[b] - counts[a] || a.localeCompare(b);
+  });
+
+  var active = 'all';
+
+  function chip(label, count, value) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip';
+    b.dataset.value = value;
+    b.setAttribute('aria-pressed', value === active ? 'true' : 'false');
+    b.innerHTML = label + '<span class="count">' + count + '</span>';
+    return b;
+  }
+
+  rail.appendChild(chip('all', entries.length, 'all'));
+  tags.forEach(function (t) { rail.appendChild(chip(t, counts[t], t)); });
+
+  function apply(value) {
+    active = value;
+    var shown = 0;
+    entries.forEach(function (el) {
+      var match = value === 'all' || (' ' + el.dataset.tags + ' ').indexOf(' ' + value + ' ') > -1;
+      el.parentNode.hidden = !match;
+      if (match) shown++;
+    });
+    empty.hidden = shown > 0;
+    rail.querySelectorAll('.chip').forEach(function (c) {
+      c.setAttribute('aria-pressed', c.dataset.value === value ? 'true' : 'false');
+    });
+  }
+
+  rail.addEventListener('click', function (e) {
+    var c = e.target.closest('.chip');
+    if (!c) return;
+    apply(c.dataset.value === active ? 'all' : c.dataset.value);
+  });
+})();
+</script>
+</body>
+</html>
