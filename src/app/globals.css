@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* ── Design tokens ────────────────────────────────────────────────────
+   Dark-first: near-black ink, warm off-white text, one amber accent.
+   ------------------------------------------------------------------ */
+@theme {
+  --color-bg: #0a0a0b;
+  --color-surface: #111113;
+  --color-raised: #17171a;
+  --color-line: #232327;
+  --color-line-strong: #34343a;
+  --color-fg: #ededea;
+  --color-muted: #8e8e96;
+  --color-faint: #5d5d65;
+  --color-accent: #f2a65a;
+  --color-accent-soft: rgb(242 166 90 / 0.12);
+
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-display: var(--font-instrument), Georgia, "Times New Roman", serif;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Faint dot grid behind the hero, fading out toward the edges. */
+.bg-grid {
+  background-image: radial-gradient(rgb(255 255 255 / 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 70% 60% at 30% 40%, black 30%, transparent 75%);
+}
+
+/* Warm glow that sits behind the hero name. */
+.glow {
+  background: radial-gradient(
+    closest-side,
+    rgb(242 166 90 / 0.18),
+    rgb(242 166 90 / 0.04) 60%,
+    transparent
+  );
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.8); }
+}
+.pulse-dot { animation: pulse-dot 2.4s ease-in-out infinite; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
